@@ -1,5 +1,9 @@
 # Personal Portfolio Website - Aadisha Jain
 
+## 🌐 Live Website
+You can view the live deployed version of this portfolio here: 
+[https://personalportfolio2034.vercel.app](https://personalportfolio2034.vercel.app)
+
 ## 🚀 Project Overview
 This repository contains my personal portfolio website developed as part of the Internal Assessment project. It showcases my professional background, technical skills, and all five projects completed throughout the course[cite: 3, 4].
 
