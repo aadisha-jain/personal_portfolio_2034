@@ -1,0 +1,403 @@
+:root {
+  --bg: #e8f1f8;
+  --surface: #ffffff;
+  --text: #0a0a0a;
+  --muted: #4a5568;
+  --accent: #1a73a8;
+  --accent-hover: #0f4c75;
+  --border: #c5d9e8;
+  --shadow: 0 10px 30px rgba(15, 76, 117, 0.1);
+}
+
+body.dark {
+  --bg: #0a1628;
+  --surface: #122033;
+  --text: #ffffff;
+  --muted: #a8bdd4;
+  --accent: #5ba3d0;
+  --accent-hover: #8ec5e8;
+  --border: #2a3f55;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.dark-mode {
+  background-color: #222;
+  color: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: scale(1.02);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-hover);
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(900px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 3rem 0 1.5rem;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-picture {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--surface);
+  box-shadow: 0 0 0 2px var(--accent), var(--shadow);
+  background: var(--border);
+}
+
+.profile-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-copy {
+  flex: 1 1 16rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.tagline {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#theme-toggle:hover,
+#theme-toggle:focus-visible {
+  border-color: var(--accent);
+}
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+.education-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.15rem;
+  border-left: 2px solid var(--border);
+  display: grid;
+  gap: 1rem;
+}
+
+.education-timeline li {
+  position: relative;
+  padding-left: 1.15rem;
+}
+
+.education-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -0.42rem;
+  top: 1.15rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+  box-shadow: 0 0 0 2px var(--border);
+}
+
+.education-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  background: var(--bg);
+}
+
+.education-year {
+  margin: 0 0 0.35rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.education-card h3 {
+  margin: 0 0 0.35rem;
+}
+
+.education-institution {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.education-card p:last-child {
+  margin: 0;
+}
+
+#skills ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.project-filter {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.project-filter label {
+  font-weight: 700;
+}
+
+#project-search {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+#project-search:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.project-search-status {
+  min-height: 1.5em;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.project-list li[hidden] {
+  display: none;
+}
+
+.project-list li {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+}
+
+.project-list h3 {
+  margin: 0 0 0.4rem;
+}
+
+.project-list p {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+
+.chatbot-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--card-bg, #f9f9f9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: var(--bg-color, #ffffff);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-msg, .bot-msg, .error-msg {
+    padding: 10px 14px;
+    border-radius: 8px;
+    max-width: 80%;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.user-msg {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.bot-msg {
+    background: #e9ecef;
+    color: #333;
+    align-self: flex-start;
+}
+
+.error-msg {
+    background: #f8d7da;
+    color: #721c24;
+    align-self: center;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.chat-input-area button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-input-area button:hover {
+    background: #0056b3;
+}
+
+.chat-input-area button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
+
+.chat-status {
+    min-height: 1.5em;
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.site-footer {
+  padding: 1rem 0 2.5rem;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding-top: 2rem;
+  }
+
+  .hero {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile-picture {
+    width: 140px;
+    height: 140px;
+  }
+
+  .education-timeline {
+    padding-left: 0.85rem;
+  }
+
+  section {
+    padding: 1.2rem;
+  }
+}
