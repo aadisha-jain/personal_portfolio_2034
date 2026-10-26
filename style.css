@@ -9,7 +9,7 @@
   --shadow: 0 10px 30px rgba(15, 76, 117, 0.1);
 }
 
-body.dark {
+body.dark-mode {
   --bg: #0a1628;
   --surface: #122033;
   --text: #ffffff;
