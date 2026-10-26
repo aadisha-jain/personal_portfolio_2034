@@ -85,7 +85,7 @@ if (chatInput && chatMessages && chatStatus && chatSendButton) {
   });
 }
 
-const themeButton = document.getElementById("themeToggle");
+const themeButton = document.getElementById("theme-toggle");
 themeButton.addEventListener("click", function () {
    document.body.classList.toggle("dark-mode");
    if (document.body.classList.contains("dark-mode")) {
